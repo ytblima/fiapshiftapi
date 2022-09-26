@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+	  <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+	  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference 
+      Include="StyleCop.Analyzers" 
+      Version="1.2.0-beta.435"
+      PrivateAssets="all" 
+      Condition="$(MSBuildProjectExtension) == '.csproj'" 
+    />
+    <PackageReference
+      Include="SonarAnalyzer.CSharp"
+      Version="8.44.0.52574"
+      PrivateAssets="all"
+      Condition="$(MSBuildProjectExtension) == '.csproj'"
+    />
+    <PackageReference
+      Include="Roslynator.Analyzers"
+      Version="4.1.1"
+      PrivateAssets="all"
+      Condition="$(MSBuildProjectExtension) == '.csproj'"
+    />
+  </ItemGroup>
+</Project>
